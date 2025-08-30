@@ -17,8 +17,11 @@ COPY src ./src
 # Build the application
 RUN ./mvnw clean package -DskipTests
 
+# Find and copy the jar file to a known location
+RUN cp target/*.jar app.jar
+
 # Expose the port that Render will use
 EXPOSE $PORT
 
 # Run the jar file
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["java", "-jar", "app.jar"]
