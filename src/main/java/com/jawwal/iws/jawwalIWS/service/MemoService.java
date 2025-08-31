@@ -13,7 +13,7 @@ import java.util.Map;
 public class MemoService {
 
     private final RestTemplate restTemplate;
-    private static final String BASE_URL = "https://integserver1.paltel.ps/memo/api/memo";
+    private static final String BASE_URL = "";
 
     public Map<String, Object> createMemo(Map<String, Object> memoRequest) {
         HttpHeaders headers = new HttpHeaders();
